@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="D:\Alpha\project1\faq\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="accodation">
+        <div class="image-box">
+        <img src="img/Question-Speech-Bubbles.jpg" alt="img">
+    </div>
+
+    <div class="accodation-text">
+        <div class="title">FAQ</div>
+    
+
+    <ul class="ul faq-text">
+        <li>
+            <div  class="question-arrow">
+            <span class="question">WHAT KIND OF DIGITAL SERVICES DO YOU PROVIDE?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, voluptatem.</p>
+            <span class="line"></span>
+        </li>
+        <li>
+            <div  class="question-arrow">
+            <span class="question">WHAT IS YOUR PROCESS FOR WORKING WITH CLIENTS?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dicta.?</p>
+            <span class="line"></span>
+        </li>
+        <li>
+            <div  class="question-arrow">
+            <span class="question">WHAT IS YOUR TIMELINE FOR COMPLETING A PROJECT?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+            <span class="line"></span>
+        </li>
+        <li>
+            <div  class="question-arrow">
+            <span class="question">WHAT IF I'M NOT SATISFIED WITH THE WORK?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, molestias.</p>
+            <span class="line"></span>
+        </li>
+        </ul>
+    </div>
+            
+    </div>
+
+
+<script>
+    let li = document.querySelectorAll(".faq-text li");
+    for (var i = 0; i < li.length; i++){
+        li[i].addEventListener("click", (e)=>{
+            let clickedLi;
+            if(e.target.classList.contains("question-arrow")){
+               clickedLi = e.target.parentElement;
+               
+        }else{
+            clickedLi = e.target.parentElement.parentElement;
+        }
+        clickedLi.classList.toggle("showAnswer");
+
+        });
+    }
+    
+</script>
+
+
+
+</body>
+</html>
